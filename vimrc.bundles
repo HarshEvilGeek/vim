@@ -1,0 +1,42 @@
+if &compatible
+  set nocompatible
+end
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+" Let Vundle manage Vundle
+Plugin 'gmarik/Vundle.vim'
+
+" Define bundles via Github repos
+
+" UI
+Plugin 'altercation/vim-colors-solarized'
+
+" File Navigation
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+
+" Code Navigation
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'majutsushi/tagbar'
+
+" Code Completion/Modification
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'msanders/snipmate.vim'
+Plugin 'rstacruz/sparkup'
+
+" Integrations
+Plugin 'tpope/vim-fugitive'
+
+if filereadable(expand("~/vim/vimrc.bundle.local"))
+  source ~/.vimrc.bundle.local
+endif
+
+call vundle#end()
+filetype on
